@@ -66,6 +66,7 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:tag="btnInicio"
                 android:text="Iniciar"
                 android:textAlignment="center" />
 
@@ -74,6 +75,7 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:tag="btnRegistro"
                 android:text="Registrarse" />
         </LinearLayout>
 

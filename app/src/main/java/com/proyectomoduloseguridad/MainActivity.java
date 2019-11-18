@@ -56,30 +56,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void updateUI(FirebaseUser currentUser) {
-        Intent saltoHome = new Intent(MainActivity.this, Registro.class);
+        Intent saltoHome = new Intent(MainActivity.this, Home.class);
         saltoHome.putExtra("Usuario", currentUser);
         startActivity(saltoHome);
     }
 
     @Override
     public void onClick(View view) {
-        switch (String.valueOf(view.getId())){
-            case "btnIniciar":
-                nomusu = correo.getText().toString();
-                clausu = clave.getText().toString();
+        Object tag = view.getTag();
+        if ("btnInicio".equals(tag)) {
+            nomusu = correo.getText().toString();
+            clausu = clave.getText().toString();
 
-                inicioSecion(nomusu, clausu);
-                break;
-            case "btnRegistrar":
-                break;
-            default:
-                throw new IllegalStateException("Unexpected value: " + String.valueOf(view.getId()));
+            inicioSecion(nomusu, clausu);
+        } else if ("btnRegistro".equals(tag)) {
+
         }
     }
 
     private void inicioSecion(String email, String pass) {
         mAuth.signInWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
