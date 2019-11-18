@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "110542486126-6q8gshp7v6bdfe2q225m1c23fbrvji80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.proyectomoduloseguridad",
+            "certificate_hash": "22b3900dc240c49a51828a25bfa6907b6afd73f9"
+          }
+        },
+        {
           "client_id": "110542486126-rjujuk9ofhqh57o3nakjvs2ct8q7l8pt.apps.googleusercontent.com",
           "client_type": 3
         }
