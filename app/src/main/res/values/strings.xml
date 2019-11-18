@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Proyecto Modulo Seguridad</string>
+
+    <string name="TextoHintCorreo">Email</string>
+</resources>
